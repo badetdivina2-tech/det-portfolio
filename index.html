@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bernadette A. Divina — Portfolio & IT Profile</title>
+  <meta name="description" content="Personal portfolio and academic profile of Bernadette A. Divina, 4th Year BSIT student at Data Center College of the Philippines." />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bernadette A. Divina — IT Student & Developer Portfolio" />
+  <meta property="og:description" content="BSIT 4th Year Student · Sarak Civic GIS & Community Infrastructure · Data Center College of the Philippines" />
+  <meta property="og:image" content="./profile.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#fefce8',
+              100: '#fef9c3',
+              200: '#fef08a',
+              300: '#fde047',
+              400: '#facc15',
+              500: '#eab308', // Clean warm golden yellow
+              600: '#ca8a04',
+              700: '#a16207',
+              800: '#854d0e',
+              900: '#713f12',
+            },
+            surface: {
+              light: '#fcfcfc',
+              'light-card': '#ffffff',
+              'light-subtle': '#f4f4f5',
+              dark: '#0f172a', // Matte slate-900
+              'dark-card': '#1e293b', // Flat matte slate-800
+              'dark-subtle': '#182234',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Clean, flat design system - strictly no glowing drop-shadows or neon filters */
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Custom subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d4d4d8;
+      border-radius: 4px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #334155;
+    }
+
+    /* Print Resume Stylesheet */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-only {
+        display: block !important;
+      }
+      .print-card {
+        border: 1px solid #e4e4e7 !important;
+        page-break-inside: avoid;
+        box-shadow: none !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-surface-light dark:bg-surface-dark text-zinc-800 dark:text-zinc-200 min-h-screen transition-colors duration-200 antialiased selection:bg-brand-400/30 selection:text-zinc-900 dark:selection:bg-brand-500/30 dark:selection:text-zinc-100">
+
+  <!-- =========================================================================
+       1. HEADER / NAVIGATION (STICKY)
+       ========================================================================= -->
+  <header class="no-print sticky top-0 z-40 w-full border-b border-zinc-200/80 dark:border-zinc-800/80 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Logo & Name -->
+      <a href="#about" class="group flex items-center gap-3 focus:outline-none">
+        <div class="w-10 h-10 rounded-full bg-brand-500 text-zinc-950 font-bold font-mono text-sm flex items-center justify-center border border-brand-600 transition-transform group-hover:scale-105">
+          BD
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-sm sm:text-base tracking-tight text-zinc-900 dark:text-zinc-100 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+            Bernadette A. Divina
+          </span>
+          <span class="text-[11px] font-mono tracking-wider uppercase text-zinc-500 dark:text-zinc-400">
+            BSIT · 4th Year
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-400">
+        <a href="#about" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">About</a>
+        <a href="#experience" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Experience</a>
+        <a href="#education" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Education</a>
+        <a href="#skills" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Projects</a>
+        <a href="#certificates" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Certificates</a>
+        <a href="#contact" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Controls: Theme Toggle & Mobile Menu -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggleBtn" type="button" aria-label="Toggle dark/light mode" class="w-9 h-9 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/80 text-zinc-600 dark:text-zinc-300 hover:text-brand-600 dark:hover:text-brand-400 hover:border-brand-500/40 transition-colors flex items-center justify-center">
+          <i id="themeIcon" data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileMenuBtn" type="button" aria-label="Toggle navigation menu" class="md:hidden w-9 h-9 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/80 text-zinc-600 dark:text-zinc-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors flex items-center justify-center">
+          <i id="menuIcon" data-lucide="menu" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-zinc-200 dark:border-zinc-800 bg-surface-light dark:bg-surface-dark px-4 py-4 space-y-2 text-sm font-medium">
+      <a href="#about" class="block py-2 px-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300">About</a>
+      <a href="#experience" class="block py-2 px-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300">Experience</a>
+      <a href="#education" class="block py-2 px-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300">Education</a>
+      <a href="#skills" class="block py-2 px-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300">Skills</a>
+      <a href="#projects" class="block py-2 px-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300">Projects</a>
+      <a href="#certificates" class="block py-2 px-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300">Certificates</a>
+      <a href="#contact" class="block py-2 px-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300">Contact</a>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================= -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 space-y-20">
+
+    <!-- =======================================================================
+         2. HERO / ABOUT ME SECTION
+         ======================================================================= -->
+    <section id="about" class="scroll-mt-24">
+      <div class="p-6 sm:p-10 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-surface-light-card dark:bg-surface-dark-card shadow-none flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12">
+        
+        <!-- Profile Picture Column -->
+        <div class="relative shrink-0 flex flex-col items-center">
+          <div class="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full p-1 bg-surface-light-card dark:bg-surface-dark-card border-2 border-brand-500">
+            <img 
+              id="profileImg" 
+              src="./profile.jpg" 
+              alt="Bernadette A. Divina" 
+              class="w-full h-full rounded-full object-cover object-top"
+              onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80'"
+            />
+          </div>
+          <!-- Clean status pill (No glow, flat style) -->
+          <div class="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono font-medium border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800/90 text-zinc-700 dark:text-zinc-300">
+            <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+            <span>Open for Internships</span>
+          </div>
+        </div>
+
+        <!-- Bio & Personal Info Column -->
+        <div class="flex-1 text-center md:text-left space-y-4">
+          <div class="inline-block px-2.5 py-0.5 rounded text-xs font-mono font-semibold tracking-wider uppercase bg-brand-500/15 dark:bg-brand-500/20 text-brand-700 dark:text-brand-400 border border-brand-500/30">
+            Portfolio & Academic CV
+          </div>
+
+          <h1 id="heroName" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-brand-600 dark:text-brand-400 uppercase font-mono">
+            BERNADETTE A. DIVINA
+          </h1>
+
+          <p class="text-sm sm:text-base font-medium text-zinc-500 dark:text-zinc-400">
+            Bachelor of Science in Information Technology (BSIT) Student
+          </p>
+
+          <p id="heroBio" class="text-zinc-700 dark:text-zinc-300 text-sm sm:text-base leading-relaxed max-w-2xl">
+            <!-- Rendered from portfolioData -->
+          </p>
+
+          <!-- Contact / Quick Meta Badges -->
+          <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-2 text-xs text-zinc-600 dark:text-zinc-400">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/40">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i>
+              <span id="quickAddress">Dugong, Bucay, Abra</span>
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/40">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i>
+              <a href="mailto:badetdivina2@gmail.com" class="hover:underline">badetdivina2@gmail.com</a>
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/40">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i>
+              <span id="quickPhone">09979377343</span>
+            </span>
+          </div>
+
+          <!-- Secondary Actions -->
+          <div class="pt-4 flex flex-wrap items-center justify-center md:justify-start gap-3 no-print">
+            <a href="./resume.pdf" target="_blank" download="Bernadette_A_Divina_Resume.pdf" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-zinc-950 font-semibold text-xs tracking-wide uppercase font-mono border border-brand-600 transition-all shadow-none">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span>Download Resume (PDF)</span>
+            </a>
+            <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800/60 text-zinc-800 dark:text-zinc-200 hover:border-brand-500 text-xs font-semibold uppercase font-mono transition-colors">
+              <i data-lucide="send" class="w-4 h-4 text-brand-600 dark:text-brand-400"></i>
+              <span>Get in Touch</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. EXPERIENCE SECTION (FROM RESUME)
+         ======================================================================= -->
+    <section id="experience" class="scroll-mt-24 space-y-6">
+      <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-2.5 h-2.5 rounded-full bg-brand-500"></div>
+          <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 uppercase font-mono">
+            Work Experience
+          </h2>
+        </div>
+        <span class="text-xs font-mono text-zinc-500 dark:text-zinc-400 uppercase">Internship</span>
+      </div>
+
+      <div id="experienceList" class="space-y-4">
+        <!-- Rendered from portfolioData -->
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. EDUCATION SECTION (FROM RESUME)
+         ======================================================================= -->
+    <section id="education" class="scroll-mt-24 space-y-6">
+      <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-2.5 h-2.5 rounded-full bg-brand-500"></div>
+          <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 uppercase font-mono">
+            Education
+          </h2>
+        </div>
+        <span class="text-xs font-mono text-zinc-500 dark:text-zinc-400 uppercase">BSIT Degree</span>
+      </div>
+
+      <div id="educationTimeline" class="space-y-4">
+        <!-- Rendered from portfolioData -->
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. SKILLS & LANGUAGES SECTION (FROM RESUME)
+         ======================================================================= -->
+    <section id="skills" class="scroll-mt-24 space-y-6">
+      <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-2.5 h-2.5 rounded-full bg-brand-500"></div>
+          <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 uppercase font-mono">
+            Skills & Competencies
+          </h2>
+        </div>
+        <span class="text-xs font-mono text-zinc-500 dark:text-zinc-400 uppercase">Resume Profile</span>
+      </div>
+
+      <div id="skillsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Rendered dynamically from portfolioData with yellow left-border accent -->
+      </div>
+
+      <!-- Languages Bar from Resume -->
+      <div class="print-card rounded-xl border border-zinc-200 dark:border-zinc-800 bg-surface-light-card dark:bg-surface-dark-card p-5 space-y-3">
+        <div class="flex items-center gap-2">
+          <i data-lucide="languages" class="w-4 h-4 text-brand-600 dark:text-brand-400"></i>
+          <h3 class="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-semibold">Languages</h3>
+        </div>
+        <div id="languagesList" class="flex flex-wrap gap-2.5">
+          <!-- Rendered dynamically from portfolioData -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. PROJECTS SECTION
+         ======================================================================= -->
+    <section id="projects" class="scroll-mt-24 space-y-6">
+      <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-2.5 h-2.5 rounded-full bg-brand-500"></div>
+          <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 uppercase font-mono">
+            Featured Project
+          </h2>
+        </div>
+        <span class="text-xs font-mono text-zinc-500 dark:text-zinc-400 uppercase">Civic GIS System</span>
+      </div>
+
+      <div id="projectsGrid">
+        <!-- Rendered dynamically from portfolioData -->
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. CERTIFICATES SECTION
+         ======================================================================= -->
+    <section id="certificates" class="scroll-mt-24 space-y-6">
+      <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-2.5 h-2.5 rounded-full bg-brand-500"></div>
+          <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 uppercase font-mono">
+            Certifications & Webinars
+          </h2>
+        </div>
+        <span class="text-xs font-mono text-zinc-500 dark:text-zinc-400 uppercase">Verified Credentials</span>
+      </div>
+
+      <div id="certificatesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically from portfolioData -->
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. CONTACT / FOOTER
+         ======================================================================= -->
+    <section id="contact" class="scroll-mt-24 pt-6">
+      <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-surface-light-card dark:bg-surface-dark-card p-6 sm:p-10 space-y-8">
+        
+        <div class="border-b border-zinc-200 dark:border-zinc-800 pb-6">
+          <h2 class="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 uppercase font-mono">
+            Get in Touch
+          </h2>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+            Feel free to reach out for collaborations, academic inquiries, or opportunities.
+          </p>
+        </div>
+
+        <!-- Contact Information Cards: Address, Email, Phone, GitHub, and Facebook beside each other -->
+        <div id="contactGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5">
+          <!-- Rendered dynamically from portfolioData -->
+        </div>
+
+        <!-- Centered Copyright Line -->
+        <div class="pt-6 border-t border-zinc-200 dark:border-zinc-800 text-center">
+          <p class="text-xs font-mono text-zinc-500 dark:text-zinc-400">
+            © 2026 Bernadette A. Divina. All rights reserved.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       MODAL / LIGHTBOX VIEWER FOR PROJECTS & CERTIFICATES
+       ========================================================================= -->
+  <div id="detailModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4 overflow-y-auto no-print">
+    <div class="relative w-full max-w-3xl rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-surface-light-card dark:bg-surface-dark-card shadow-2xl p-6 sm:p-8 space-y-6 animate-in fade-in zoom-in-95 duration-150">
+      
+      <!-- Close button -->
+      <button id="closeModalBtn" type="button" aria-label="Close modal" class="absolute top-4 right-4 w-8 h-8 rounded-full border border-zinc-200 dark:border-zinc-700 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 flex items-center justify-center transition-colors">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <!-- Modal Content Container -->
+      <div id="modalContent" class="space-y-4">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 hidden items-center gap-2 px-4 py-2.5 rounded-lg border border-brand-500/50 bg-surface-light-card dark:bg-surface-dark-card text-zinc-900 dark:text-zinc-100 text-xs font-mono shadow-md">
+    <i data-lucide="check" class="w-4 h-4 text-brand-600 dark:text-brand-400"></i>
+    <span id="toastMessage">Copied to clipboard!</span>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" type="button" aria-label="Back to top" class="no-print fixed bottom-6 left-6 z-40 hidden w-9 h-9 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-surface-light-card/90 dark:bg-surface-dark-card/90 text-zinc-600 dark:text-zinc-300 hover:text-brand-600 dark:hover:text-brand-400 hover:border-brand-500/40 transition-all items-center justify-center">
+    <i data-lucide="arrow-up" class="w-4 h-4"></i>
+  </button>
+
+  <!-- =========================================================================
+       CENTRAL JAVASCRIPT DATA & DYNAMIC RENDERING SCRIPT
+       ========================================================================= -->
+  <script>
+    /**
+     * CENTRAL PORTFOLIO DATA OBJECT
+     * Modify values here to automatically update the entire UI.
+     */
+    const portfolioData = {
+      personalInfo: {
+        name: "Bernadette A. Divina",
+        title: "Bachelor of Science in Information Technology",
+        email: "badetdivina2@gmail.com",
+        phone: "09979377343",
+        address: "Dugong, Bucay, Abra",
+        githubUsername: "bernadettealmachardivina-code",
+        githubUrl: "https://github.com/bernadettealmachardivina-code/BernadetteDivina.github.io",
+        facebookUrl: "https://www.facebook.com/badet.divina",
+        bio: "I am a fourth-year Bachelor of Science in Information Technology (BSIT) student seeking an On-the-Job Training opportunity to gain practical experience and strengthen my technical and professional skills. I am a quick learner, responsible, and motivated to contribute effectively to the organization while continuously improving my knowledge in the IT field.",
+        profileImage: "./profile.jpg",
+        resumePdf: "./resume.pdf"
+      },
+
+      experience: [
+        {
+          id: "immersion-intern",
+          role: "Work Immersion Intern",
+          organization: "Dugong National High School",
+          location: "Dugong, Bucay, Abra",
+          period: "2022 — 2023",
+          responsibilities: [
+            "Encoded and maintained school records with accuracy.",
+            "Organized and managed confidential documents and files.",
+            "Assisted in preparing and photocopying instructional materials.",
+            "Performed document filing, sorting, and records management.",
+            "Supported teachers and administrative staff with daily office operations.",
+            "Demonstrated strong organizational skills and attention to detail in completing assigned tasks."
+          ]
+        }
+      ],
+
+      education: [
+        {
+          id: "tertiary",
+          level: "Tertiary Education",
+          institution: "Data Center College of the Philippines - Bangued",
+          degree: "Bachelor of Science in Information Technology",
+          year: "4th Year BSIT (2026 — 2027)",
+          status: "Current",
+          description: "Fourth-year Bachelor of Science in Information Technology student preparing for On-the-Job Training (OJT). Developing technical competence in web development, network infrastructure, software design, and practical systems implementation."
+        }
+      ],
+
+      // Skills populated directly from official resume
+      skills: [
+        {
+          id: "skill-web",
+          name: "Web Development",
+          category: "Technical",
+          description: "Designing responsive frontend layouts, interactive web pages, HTML5, CSS3, Tailwind CSS, and DOM scripting.",
+          tags: ["HTML/CSS", "JavaScript", "Tailwind CSS"]
+        },
+        {
+          id: "skill-net",
+          name: "Networking",
+          category: "Technical",
+          description: "Foundational networking principles, local area network setup, IP routing basics, and hardware connectivity diagnostics.",
+          tags: ["Network Setup", "Diagnostics", "LAN"]
+        },
+        {
+          id: "skill-design",
+          name: "Design Systems",
+          category: "UI Architecture",
+          description: "Implementing cohesive UI components, consistent typographic scales, visual hierarchies, and structured styling.",
+          tags: ["UI Systems", "Component Patterns", "Consistency"]
+        },
+        {
+          id: "skill-office",
+          name: "Microsoft Office",
+          category: "Productivity",
+          description: "Document encoding, data spreadsheet organization, formatting, presentation design, and administrative records maintenance.",
+          tags: ["MS Word", "MS Excel", "MS PowerPoint"]
+        },
+        {
+          id: "skill-comm",
+          name: "Communication Skills",
+          category: "Professional",
+          description: "Effective verbal and written communication with administrative staff, instructors, team members, and stakeholders.",
+          tags: ["Verbal/Written", "Active Listening", "Teamwork"]
+        },
+        {
+          id: "skill-time",
+          name: "Time Management",
+          category: "Work Ethic",
+          description: "Systematic task prioritization, dependable execution, attention to detail, and meeting deadlines consistently.",
+          tags: ["Prioritization", "Punctuality", "Organization"]
+        }
+      ],
+
+      languages: [
+        { name: "English", level: "Professional Working Proficiency" },
+        { name: "Tagalog", level: "Native / Bilingual" },
+        { name: "Ilocano", level: "Native / Regional Dialect" }
+      ],
+
+      // Featured Project: Sarak (scanned from user files)
+      projects: [
+        {
+          id: "sarak-gis",
+          title: "Sarak: Bangued Civic GIS & Directory",
+          category: "Web GIS & Civic Infrastructure",
+          description: "An open civic mapping and local business discovery platform for Bangued, Abra. Features categorized point-of-interest markers (coffee shops, healthcare, fast food, groceries), multi-layer basemap switching (CARTO Dark Matter, Esri Satellite, Leaflet), operating hours, search filtering, and citizen place submission.",
+          image: "./assets/projects/sarak-overview.png",
+          gallery: [
+            {
+              title: "Satellite Imagery Basemap",
+              desc: "High-resolution satellite view with 43+ categorized POI markers across Bangued streets.",
+              src: "./assets/projects/sarak-overview.png"
+            },
+            {
+              title: "Leaflet Street Basemap",
+              desc: "Standard OSM street grid navigation covering Taft Avenue, Rizal Street, Gomez Street, and McKinley Street.",
+              src: "./assets/projects/sarak-streets.png"
+            },
+            {
+              title: "CARTO Dark Matter Mode",
+              desc: "Matte high-contrast cartography optimized for nighttime exploration and clean vector viewing.",
+              src: "./assets/projects/sarak-darkmap.png"
+            },
+            {
+              title: "Place Details Drawer (Shakey's Pizza)",
+              desc: "Side panel displaying photos, verified address, operating hours, directions, and precise GPS coordinates.",
+              src: "./assets/projects/sarak-detail.png"
+            },
+            {
+              title: "About Sarak & Civic Sources",
+              desc: "Open civic data infrastructure powered by OpenStreetMap, CARTO, Esri ArcGIS, and Bangued LGU records.",
+              src: "./assets/projects/sarak-about.png"
+            }
+          ],
+          tags: ["Leaflet GIS", "OpenStreetMap", "Esri ArcGIS", "CARTO Dark", "Bangued, Abra", "Civic Tech"],
+          link: "#",
+          highlights: [
+            "Civic map infrastructure with 43+ verified local landmark coordinates across Bangued",
+            "Multi-layer basemap switching between Leaflet Streets, SARAK Dark Matter, and Esri Satellite",
+            "Interactive place drawer displaying operating hours, navigation directions, and LGU records"
+          ]
+        }
+      ],
+
+      // Exactly 1 certificate scanned from the provided DICT credential
+      certificates: [
+        {
+          id: "dict-psc-xi",
+          title: "Understanding Startups & Getting Your Idea Ready for the Philippine Startup Challenge XI",
+          issuer: "Department of Information and Communications Technology (DICT)",
+          subIssuer: "Cordillera Administrative Region (CAR) · Bagong Pilipinas · IIDB",
+          signatory: "Dir. Jimmicio S. Daoaten, Regional Director",
+          date: "September 7, 2026",
+          credentialId: "COP-WSI1-2026-023",
+          image: "./certificate.png",
+          description: "Official Certificate of Participation for the national DICT webinar series focused on startup formulation, refining innovation-driven solutions, and preparing competitive concepts for the Philippine Startup Challenge XI.",
+          link: "./certificate.png"
+        }
+      ]
+    };
+
+    /**
+     * DYNAMIC DOM RENDERING ENGINE
+     */
+    function renderPortfolio() {
+      const { personalInfo, experience, education, skills, languages, projects, certificates } = portfolioData;
+
+      // 1. Personal Info Rendering
+      document.getElementById('heroName').textContent = personalInfo.name;
+      document.getElementById('heroBio').textContent = personalInfo.bio;
+      document.getElementById('profileImg').src = personalInfo.profileImage;
+      document.getElementById('quickAddress').textContent = personalInfo.address;
+      document.getElementById('quickPhone').textContent = personalInfo.phone;
+
+      // 2. Experience Rendering (From Resume)
+      const experienceContainer = document.getElementById('experienceList');
+      if (experienceContainer) {
+        experienceContainer.innerHTML = experience.map(item => `
+          <div class="print-card rounded-xl border border-zinc-200 dark:border-zinc-800 bg-surface-light-card dark:bg-surface-dark-card p-6 space-y-4 transition-colors hover:border-brand-500/50">
+            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 border-b border-zinc-100 dark:border-zinc-800 pb-3">
+              <div>
+                <span class="text-[11px] font-mono uppercase tracking-wider text-brand-700 dark:text-brand-400 font-semibold">${item.organization}</span>
+                <h3 class="text-base sm:text-lg font-bold text-zinc-900 dark:text-zinc-100 mt-0.5">${item.role}</h3>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 font-mono flex items-center gap-1.5 mt-0.5">
+                  <i data-lucide="map-pin" class="w-3 h-3 text-brand-500"></i>
+                  <span>${item.location}</span>
+                </p>
+              </div>
+              <span class="text-xs font-mono font-medium text-brand-700 dark:text-brand-400 bg-brand-500/10 dark:bg-brand-500/20 px-2.5 py-1 rounded border border-brand-500/20 w-fit">
+                ${item.period}
+              </span>
+            </div>
+
+            <div class="space-y-2">
+              <h4 class="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-semibold">Key Responsibilities & Accomplishments</h4>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs sm:text-sm text-zinc-600 dark:text-zinc-300">
+                ${item.responsibilities.map(r => `
+                  <li class="flex items-start gap-2">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5"></i>
+                    <span>${r}</span>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // 3. Education Rendering (From Resume)
+      const educationContainer = document.getElementById('educationTimeline');
+      educationContainer.innerHTML = education.map(item => `
+        <div class="print-card rounded-xl border border-zinc-200 dark:border-zinc-800 bg-surface-light-card dark:bg-surface-dark-card p-5 transition-colors hover:border-brand-500/50">
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+            <h3 class="font-bold text-base text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+              ${item.institution}
+            </h3>
+            <span class="text-xs font-mono font-medium text-brand-700 dark:text-brand-400 bg-brand-500/10 dark:bg-brand-500/20 px-2 py-0.5 rounded border border-brand-500/20 w-fit">
+              ${item.year}
+            </span>
+          </div>
+          <p class="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mt-1">
+            ${item.degree}
+          </p>
+          <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1 leading-relaxed">
+            ${item.description}
+          </p>
+        </div>
+      `).join('');
+
+      // 4. Skills Rendering (Resume Skills)
+      const skillsContainer = document.getElementById('skillsGrid');
+      skillsContainer.innerHTML = skills.map(skill => `
+        <div class="print-card rounded-xl border border-zinc-200 dark:border-zinc-800 bg-surface-light-card dark:bg-surface-dark-card p-4 border-l-4 border-l-brand-500 transition-all hover:border-zinc-300 dark:hover:border-zinc-700">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-mono uppercase tracking-wider text-brand-700 dark:text-brand-400 font-semibold">
+              ${skill.category}
+            </span>
+            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i>
+          </div>
+          <h4 class="font-bold text-sm text-zinc-900 dark:text-zinc-100 mt-1.5">
+            ${skill.name}
+          </h4>
+          <p class="text-xs text-zinc-600 dark:text-zinc-400 mt-1 line-clamp-2">
+            ${skill.description}
+          </p>
+          <div class="mt-3 flex flex-wrap gap-1">
+            ${skill.tags.map(t => `<span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">${t}</span>`).join('')}
+          </div>
+        </div>
+      `).join('');
+
+      // 5. Languages Rendering
+      const languagesContainer = document.getElementById('languagesList');
+      if (languagesContainer && languages) {
+        languagesContainer.innerHTML = languages.map(lang => `
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/60">
+            <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+            <span class="text-xs font-bold text-zinc-800 dark:text-zinc-200">${lang.name}</span>
+            <span class="text-[10px] font-mono text-zinc-500 dark:text-zinc-400">(${lang.level})</span>
+          </div>
+        `).join('');
+      }
+
+      // 4. Projects Rendering (Sarak Civic GIS Showcase)
+      const projectsContainer = document.getElementById('projectsGrid');
+      const proj = projects[0];
+      if (proj) {
+        projectsContainer.innerHTML = `
+          <div class="print-card rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-surface-light-card dark:bg-surface-dark-card overflow-hidden flex flex-col lg:flex-row group transition-colors hover:border-brand-500/50">
+            <!-- Left: Interactive Gallery Showcase with 5 Views -->
+            <div class="lg:w-7/12 p-5 sm:p-6 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/30">
+              <div class="space-y-3">
+                <div class="relative aspect-video w-full rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-950">
+                  <img 
+                    id="sarakMainPreview"
+                    src="${proj.image}" 
+                    alt="${proj.title}" 
+                    class="w-full h-full object-cover object-top transition-opacity duration-200"
+                    onerror="this.src='./project-sarak.png'"
+                  />
+                  <div class="absolute top-3 left-3">
+                    <span class="px-2.5 py-1 rounded text-[11px] font-mono font-medium bg-zinc-900/90 text-brand-400 border border-brand-500/40 backdrop-blur-sm">
+                      ${proj.category}
+                    </span>
+                  </div>
+                  <button 
+                    type="button" 
+                    onclick="openProjectModal('${proj.id}')"
+                    aria-label="Enlarge image"
+                    class="absolute bottom-3 right-3 px-2.5 py-1 rounded-md bg-zinc-900/90 hover:bg-zinc-900 text-zinc-200 text-xs font-mono border border-zinc-700/80 flex items-center gap-1.5 transition-colors"
+                  >
+                    <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-brand-400"></i>
+                    <span>Enlarge</span>
+                  </button>
+                </div>
+
+                <!-- 5 Screenshot Thumbnails -->
+                <div class="space-y-1.5">
+                  <div class="flex items-center justify-between text-[11px] font-mono text-zinc-500 dark:text-zinc-400">
+                    <span>Sarak Interface Views (5 Screenshots)</span>
+                    <span id="activeViewLabel" class="text-brand-700 dark:text-brand-400 font-semibold truncate max-w-[200px]">Satellite View</span>
+                  </div>
+                  <div class="grid grid-cols-5 gap-2">
+                    ${proj.gallery.map((item, idx) => `
+                      <button 
+                        type="button" 
+                        onclick="switchSarakPreview(${idx})"
+                        class="sarak-thumb-btn aspect-video rounded-lg overflow-hidden border-2 transition-all ${idx === 0 ? 'border-brand-500' : 'border-zinc-200 dark:border-zinc-800 opacity-70 hover:opacity-100 hover:border-zinc-400'}"
+                        title="${item.title}"
+                      >
+                        <img src="${item.src}" alt="${item.title}" class="w-full h-full object-cover" />
+                      </button>
+                    `).join('')}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Project Description & Features -->
+            <div class="lg:w-5/12 p-6 sm:p-8 flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <div class="space-y-1.5">
+                  <span class="text-xs font-mono font-semibold text-brand-700 dark:text-brand-400 uppercase tracking-wider">Bangued Civic Infrastructure</span>
+                  <h3 class="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+                    ${proj.title}
+                  </h3>
+                  <p class="text-xs text-zinc-500 dark:text-zinc-400 font-mono">
+                    OpenStreetMap · CARTO Dark Matter · Esri ArcGIS · Phosphor Icons
+                  </p>
+                </div>
+
+                <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                  ${proj.description}
+                </p>
+
+                <div class="space-y-2 pt-2 border-t border-zinc-100 dark:border-zinc-800">
+                  <h4 class="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-semibold">Key Capabilities</h4>
+                  <ul class="space-y-2 text-xs text-zinc-600 dark:text-zinc-300">
+                    ${proj.highlights.map(h => `
+                      <li class="flex items-start gap-2.5">
+                        <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5"></i>
+                        <span>${h}</span>
+                      </li>
+                    `).join('')}
+                  </ul>
+                </div>
+              </div>
+
+              <div class="space-y-4 pt-4 border-t border-zinc-100 dark:border-zinc-800">
+                <div class="flex flex-wrap gap-1.5">
+                  ${proj.tags.map(t => `<span class="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">${t}</span>`).join('')}
+                </div>
+
+                <div class="flex items-center justify-between pt-1">
+                  <button 
+                    type="button" 
+                    onclick="openProjectModal('${proj.id}')"
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-zinc-950 font-semibold text-xs font-mono tracking-wide uppercase border border-brand-600 transition-colors"
+                  >
+                    <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                    <span>View All Screenshots & Specs</span>
+                  </button>
+                  <span class="text-xs font-mono text-zinc-400">Bangued, Abra</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // 5. Certificates Rendering (Exactly 1 item)
+      const certificatesContainer = document.getElementById('certificatesGrid');
+      certificatesContainer.innerHTML = certificates.map(cert => `
+        <div class="print-card rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-surface-light-card dark:bg-surface-dark-card overflow-hidden flex flex-col group transition-colors hover:border-brand-500/50">
+          <div class="relative aspect-video sm:aspect-4/3 w-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden border-b border-zinc-200 dark:border-zinc-800 cursor-pointer" onclick="openCertificateModal('${cert.id}')">
+            <img 
+              src="${cert.image}" 
+              alt="${cert.title}" 
+              class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-102"
+              onerror="this.src='./certificate.png'"
+            />
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-950/90 text-brand-400 text-xs font-mono font-medium border border-brand-500/50 flex items-center gap-1.5">
+                <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i>
+                Click to Enlarge
+              </span>
+            </div>
+          </div>
+
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between text-[11px] font-mono text-zinc-500 dark:text-zinc-400">
+                <span>${cert.date}</span>
+                <span class="text-brand-700 dark:text-brand-400 font-semibold">${cert.credentialId}</span>
+              </div>
+              <h3 class="font-bold text-sm sm:text-base text-zinc-900 dark:text-zinc-100 line-clamp-2">
+                ${cert.title}
+              </h3>
+              <p class="text-xs text-zinc-600 dark:text-zinc-400 font-medium">
+                ${cert.issuer}
+              </p>
+              <p class="text-xs text-zinc-500 dark:text-zinc-400 line-clamp-2">
+                ${cert.description}
+              </p>
+            </div>
+
+            <div class="pt-2 border-t border-zinc-100 dark:border-zinc-800/80 flex items-center justify-between">
+              <button 
+                type="button" 
+                onclick="openCertificateModal('${cert.id}')"
+                class="inline-flex items-center gap-1.5 text-xs font-semibold font-mono text-brand-700 dark:text-brand-400 hover:text-brand-600 dark:hover:text-brand-300"
+              >
+                <i data-lucide="award" class="w-3.5 h-3.5"></i>
+                <span>View Full Certificate</span>
+              </button>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-500/10 text-brand-700 dark:text-brand-400 border border-brand-500/20">
+                Verified DICT
+              </span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // 6. Contact Grid Rendering (5 cards: Address, Email, Phone, GitHub, Facebook beside each other)
+      const contactContainer = document.getElementById('contactGrid');
+      contactContainer.innerHTML = `
+        <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-surface-light dark:bg-surface-dark flex flex-col justify-between gap-3">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-brand-500/15 dark:bg-brand-500/20 border border-brand-500/30 flex items-center justify-center shrink-0 text-brand-700 dark:text-brand-400">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+            </div>
+            <h4 class="text-[11px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-medium">Address</h4>
+          </div>
+          <p class="text-xs font-semibold text-zinc-900 dark:text-zinc-100">${personalInfo.address}</p>
+        </div>
+
+        <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-surface-light dark:bg-surface-dark flex flex-col justify-between gap-3">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-brand-500/15 dark:bg-brand-500/20 border border-brand-500/30 flex items-center justify-center shrink-0 text-brand-700 dark:text-brand-400">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </div>
+            <h4 class="text-[11px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-medium">Email Address</h4>
+          </div>
+          <a href="mailto:${personalInfo.email}" class="text-xs font-semibold text-zinc-900 dark:text-zinc-100 hover:text-brand-600 dark:hover:text-brand-400 truncate block">
+            ${personalInfo.email}
+          </a>
+        </div>
+
+        <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-surface-light dark:bg-surface-dark flex flex-col justify-between gap-3">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-brand-500/15 dark:bg-brand-500/20 border border-brand-500/30 flex items-center justify-center shrink-0 text-brand-700 dark:text-brand-400">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </div>
+            <h4 class="text-[11px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-medium">Mobile Phone</h4>
+          </div>
+          <a href="tel:${personalInfo.phone}" class="text-xs font-semibold text-zinc-900 dark:text-zinc-100 hover:text-brand-600 dark:hover:text-brand-400 block">
+            ${personalInfo.phone}
+          </a>
+        </div>
+
+        <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-surface-light dark:bg-surface-dark flex flex-col justify-between gap-3 group hover:border-brand-500/50 transition-colors">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-brand-500/15 dark:bg-brand-500/20 border border-brand-500/30 flex items-center justify-center shrink-0 text-brand-700 dark:text-brand-400">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </div>
+            <h4 class="text-[11px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-medium">GitHub</h4>
+          </div>
+          <a href="${personalInfo.githubUrl}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-brand-600 dark:group-hover:text-brand-400 truncate block">
+            ${personalInfo.githubUsername}
+          </a>
+        </div>
+
+        <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-surface-light dark:bg-surface-dark flex flex-col justify-between gap-3 group hover:border-brand-500/50 transition-colors">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-brand-500/15 dark:bg-brand-500/20 border border-brand-500/30 flex items-center justify-center shrink-0 text-brand-700 dark:text-brand-400">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </div>
+            <h4 class="text-[11px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-medium">Facebook</h4>
+          </div>
+          <a href="${personalInfo.facebookUrl}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-brand-600 dark:group-hover:text-brand-400 truncate block">
+            Bernadette Divina
+          </a>
+        </div>
+      `;
+
+      // Refresh icons after DOM insertion
+      lucide.createIcons();
+    }
+
+    /**
+     * SWITCH SARAK PREVIEW IMAGE
+     */
+    function switchSarakPreview(index) {
+      const proj = portfolioData.projects[0];
+      if (!proj || !proj.gallery || !proj.gallery[index]) return;
+      
+      const previewImg = document.getElementById('sarakMainPreview');
+      const label = document.getElementById('activeViewLabel');
+      
+      if (previewImg) {
+        previewImg.style.opacity = '0.3';
+        setTimeout(() => {
+          previewImg.src = proj.gallery[index].src;
+          previewImg.style.opacity = '1';
+        }, 120);
+      }
+      
+      if (label) {
+        label.textContent = proj.gallery[index].title;
+      }
+      
+      const thumbs = document.querySelectorAll('.sarak-thumb-btn');
+      thumbs.forEach((btn, i) => {
+        if (i === index) {
+          btn.classList.add('border-brand-500');
+          btn.classList.remove('border-zinc-200', 'dark:border-zinc-800', 'opacity-70');
+        } else {
+          btn.classList.remove('border-brand-500');
+          btn.classList.add('border-zinc-200', 'dark:border-zinc-800', 'opacity-70');
+        }
+      });
+    }
+
+    /**
+     * MODAL LOGIC FOR PROJECTS
+     */
+    function openProjectModal(projectId) {
+      const project = portfolioData.projects.find(p => p.id === projectId);
+      if (!project) return;
+
+      const modalContent = document.getElementById('modalContent');
+      modalContent.innerHTML = `
+        <div class="space-y-4">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <span class="text-xs font-mono uppercase text-brand-700 dark:text-brand-400 font-semibold">${project.category}</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mt-1">${project.title}</h3>
+              <p class="text-xs text-zinc-500 dark:text-zinc-400 font-mono mt-0.5">Bangued, Abra Civic Geographic Information System</p>
+            </div>
+          </div>
+
+          <div class="rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-700 bg-zinc-950">
+            <img src="${project.image}" alt="${project.title}" class="w-full max-h-[380px] object-contain mx-auto" />
+          </div>
+
+          <p class="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">${project.description}</p>
+
+          ${project.highlights ? `
+            <div class="space-y-2 pt-2">
+              <h4 class="text-xs font-mono uppercase tracking-wider text-zinc-500 font-semibold">Key Architectural Features</h4>
+              <ul class="space-y-1.5 text-xs text-zinc-600 dark:text-zinc-300">
+                ${project.highlights.map(h => `<li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-500 shrink-0"></i>${h}</li>`).join('')}
+              </ul>
+            </div>
+          ` : ''}
+
+          ${project.gallery && project.gallery.length > 0 ? `
+            <div class="space-y-3 pt-3 border-t border-zinc-200 dark:border-zinc-800">
+              <div class="flex items-center justify-between">
+                <h4 class="text-xs font-mono uppercase tracking-wider text-zinc-500 font-semibold">All 5 Sarak Interface Views</h4>
+                <span class="text-[11px] font-mono text-brand-700 dark:text-brand-400">Click to view in new tab</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[320px] overflow-y-auto pr-1">
+                ${project.gallery.map(item => `
+                  <a href="${item.src}" target="_blank" class="p-2.5 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800/60 hover:border-brand-500 flex flex-col gap-2 transition-colors group">
+                    <div class="aspect-video w-full rounded-lg overflow-hidden bg-black">
+                      <img src="${item.src}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-102 transition-transform" />
+                    </div>
+                    <div>
+                      <h5 class="text-xs font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-brand-600 dark:group-hover:text-brand-400 flex items-center justify-between">
+                        <span>${item.title}</span>
+                        <i data-lucide="external-link" class="w-3 h-3 opacity-60"></i>
+                      </h5>
+                      <p class="text-[11px] text-zinc-500 dark:text-zinc-400 mt-0.5 line-clamp-2">${item.desc}</p>
+                    </div>
+                  </a>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+
+          <div class="pt-4 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between">
+            <div class="flex flex-wrap gap-1">
+              ${project.tags.map(t => `<span class="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700">${t}</span>`).join('')}
+            </div>
+            <button onclick="closeModal()" type="button" class="px-4 py-1.5 rounded-lg border border-zinc-300 dark:border-zinc-700 text-xs font-mono hover:bg-zinc-100 dark:hover:bg-zinc-800">Close</button>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('detailModal').classList.remove('hidden');
+      document.getElementById('detailModal').classList.add('flex');
+      lucide.createIcons();
+    }
+
+    /**
+     * MODAL LOGIC FOR CERTIFICATES
+     */
+    function openCertificateModal(certId) {
+      const cert = portfolioData.certificates.find(c => c.id === certId);
+      if (!cert) return;
+
+      const modalContent = document.getElementById('modalContent');
+      modalContent.innerHTML = `
+        <div class="space-y-4">
+          <div>
+            <span class="text-xs font-mono uppercase text-brand-700 dark:text-brand-400 font-semibold">Official Credential · ${cert.credentialId}</span>
+            <h3 class="text-lg sm:text-xl font-bold text-zinc-900 dark:text-zinc-100 mt-1">${cert.title}</h3>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">${cert.issuer} — ${cert.subIssuer}</p>
+          </div>
+
+          <div class="rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-700 bg-white">
+            <img src="${cert.image}" alt="${cert.title}" class="w-full max-h-[460px] object-contain mx-auto" />
+          </div>
+
+          <div class="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200 dark:border-zinc-800 text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+            <p><strong>Description:</strong> ${cert.description}</p>
+            <p class="mt-1"><strong>Signatory:</strong> ${cert.signatory}</p>
+            <p class="mt-0.5"><strong>Date Awarded:</strong> ${cert.date}</p>
+          </div>
+
+          <div class="pt-2 flex items-center justify-between">
+            <a href="${cert.image}" target="_blank" download="Bernadette_Divina_DICT_Certificate.png" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-500 hover:bg-brand-400 text-zinc-950 font-mono text-xs font-semibold">
+              <i data-lucide="download" class="w-3.5 h-3.5"></i>
+              <span>Download Original Image</span>
+            </a>
+            <button onclick="closeModal()" type="button" class="px-4 py-1.5 rounded-lg border border-zinc-300 dark:border-zinc-700 text-xs font-mono hover:bg-zinc-100 dark:hover:bg-zinc-800">Close</button>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('detailModal').classList.remove('hidden');
+      document.getElementById('detailModal').classList.add('flex');
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      document.getElementById('detailModal').classList.add('hidden');
+      document.getElementById('detailModal').classList.remove('flex');
+    }
+
+    // Close modal on click outside or Escape key
+    document.getElementById('detailModal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('detailModal')) {
+        closeModal();
+      }
+    });
+    document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    /**
+     * BACK TO TOP SCROLL
+     */
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.remove('hidden');
+        backToTopBtn.classList.add('flex');
+      } else {
+        backToTopBtn.classList.add('hidden');
+        backToTopBtn.classList.remove('flex');
+      }
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /**
+     * THEME TOGGLE (LIGHT / DARK)
+     * Flat matte dark background, soft warm yellow accents. No neon, no glow.
+     */
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+        themeIcon.setAttribute('data-lucide', 'sun');
+      } else {
+        document.documentElement.classList.remove('dark');
+        themeIcon.setAttribute('data-lucide', 'moon');
+      }
+      lucide.createIcons();
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      themeIcon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+      lucide.createIcons();
+    });
+
+    /**
+     * MOBILE MENU TOGGLE
+     */
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Initialize application on load
+    window.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      renderPortfolio();
+    });
+  </script>
+</body>
+</html>
